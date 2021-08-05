@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+
+    nginx:
+        container_name: nginx
+        image: nginx:apline
+        ports:
+            - 80:80
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        depends_on:
+            - service-1
+
+    service-1:
+        container_name: "service-1"
+        image: MichaelRoy/servise-1
+        build: service_1
+        environment:
+            DATABASE_URI: .........................
+
+    service-2:
+        container_name: "service-2"
+        image: MichaelRoy/servise-2
+        build: service_2
+
+
+    service-3:
+        container_name: "service-3"
+        image: MichaelRoy/servise-3
+        build: service_3
+
+
+    service-4:
+        container_name: "service-4"
+        image: MichaelRoy/servise-4
+        build: service_4
+
+
+    sql:
+        container_name: sql
+        image: sql
+        environment:
+            
+
+        

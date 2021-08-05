@@ -1,0 +1,33 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+power = {
+    'species': {
+        'Jawa':5,
+        'Bith':50,
+        'Human':30,
+        'Hutt':45,
+        'Gungan':25,
+        'Droid':20,
+        'Muun':50
+    },
+    'occupation': {
+        'Bounty Hunter':30,
+        'Sith Lord':50,
+        'Jedi':50,
+        'Crime Lord': 40,
+        'Politician': 15
+    }
+}
+
+@app.route('/post/power', methods=['POST'])
+def post_power():
+    species = request.json['species']
+    occupation = request.json['occupation']
+
+    power_level = power['species'][species] + power['occupation'][occupation]
+    return jsonify(power_level)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
