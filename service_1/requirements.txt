@@ -6,4 +6,3 @@ Flask-SQLAlchemy==2.5.1
 Flask-Testing==0.8.1
 pytest
 pytest-cov
-selenium
