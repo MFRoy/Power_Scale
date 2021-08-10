@@ -2,7 +2,7 @@ from flask import url_for
 from flask_testing import TestCase
 from requests_mock import mock
 
-from service_1.application import app
+from service_1 import app
 
 class TestBase(TestCase):
     def create_app(self):
@@ -17,7 +17,7 @@ class TestResponse(TestBase):
             m.get('http://service-3:5000/get/occupation', text='Sith Lord')
             m.post('http://service-4:5000/post/power', json=55)
 
-            response = self.client.get(url_for('index'))
+            response = self.client.get(url_for('home'))
 
         self.assert200(response)
         self.assertIn('A Jawa Sith Lord has a power level of 55', response.data.decode())

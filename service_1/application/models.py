@@ -5,3 +5,4 @@ class Powerscale(db.Model):
     species = db.Column(db.String(20))
     occupation = db.Column(db.String(20))
     power = db.Column(db.Integer)
+    power_level = db.Column(db.Integer)

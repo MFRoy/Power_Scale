@@ -10,14 +10,18 @@ power = {
         'Hutt':45,
         'Gungan':25,
         'Droid':20,
-        'Muun':50
+        'Muun':50,
+        'Dug':20,
+        'kaminoan':40,
+        'Ugnaught':20
     },
     'occupation': {
         'Bounty Hunter':30,
         'Sith Lord':50,
         'Jedi':50,
         'Crime Lord': 40,
-        'Politician': 15
+        'Politician': 15,
+        'Medic':25
     }
 }
 
