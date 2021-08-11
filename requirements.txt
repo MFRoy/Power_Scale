@@ -1,9 +1,8 @@
-Flask==2.0.1
-Flask-Testing==0.8.1
-requests==2.25.1
-requests-mock==1.9.3
-Flask-SQLAlchemy==2.5.1
-Flask-Testing==0.8.1
+flask
+flask-sqlalchemy
+flask_testing
 pytest
 pytest-cov
-selenium
+requests
+requests_mock
+pymysql

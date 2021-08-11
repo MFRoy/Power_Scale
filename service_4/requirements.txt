@@ -4,4 +4,4 @@ flask-wtf
 wtforms
 pytest
 flask-testing
-selenium
+pymysql

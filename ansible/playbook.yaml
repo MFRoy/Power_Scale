@@ -1,0 +1,11 @@
+- hosts: nginx
+  become: true
+  roles:
+    - Configure NGINX
+
+- hosts:
+   - swarm-master
+   - swarm-worker
+  become: true
+  roles:
+     - Install Docker

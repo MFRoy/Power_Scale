@@ -32,5 +32,6 @@ def post_power():
     power_level = power['species'][species] + power['occupation'][occupation]
     return jsonify(power_level)
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

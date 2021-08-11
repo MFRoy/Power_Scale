@@ -1,7 +1,7 @@
 from flask import url_for
 from flask_testing import TestCase
 
-from app import app, power
+from service_4.app import app, power
 
 class TestBase(TestCase):
     def create_app(self):
@@ -14,7 +14,7 @@ class TestResponse(TestBase):
         for occupation in power['occupation']:
             for species in power['species']:
 
-                powers = {'occupation':occupation, 'species':species}
+                powers = [occupation, species]
                 response = self.client.post(url_for('post_power'), json=powers)
 
                 self.assert200(response)

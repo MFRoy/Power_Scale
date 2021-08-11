@@ -7,7 +7,7 @@ occupation = ['Bounty Hunter', 'Sith Lord', 'Jedi', 'Crime Lord', 'Politician', 
 
 @app.route('/get/occupation')
 def get_occupation():
-    return jsonify(random.choice(occupation))
+    return jsonify(random.choice(occupation).strip())
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

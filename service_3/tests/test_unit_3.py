@@ -17,5 +17,5 @@ class TestResponse(TestBase):
             response = self.client.get(url_for('get_species'))
 
             self.assert200(response)
-            self.assertIn(response.data.decode(), species)
+            self.assertIn(response.data.decode().replace('"','').strip(), species)
         

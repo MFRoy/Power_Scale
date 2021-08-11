@@ -15,9 +15,6 @@ services:
         container_name: "service-1"
         image: mfroy/service-1
         build: service_1
-        ports:
-            - target: 5000
-              published: 5000
         environment:
             DATABASE_URI: ${DATABASE_URI}
 
@@ -41,3 +38,4 @@ services:
             
 
         
+

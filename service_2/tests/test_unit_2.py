@@ -13,9 +13,9 @@ class TestResponse(TestBase):
 
     def test_get_occupation(self):
 
-        for _ in range(20):
+        for _ in range(40):
             response = self.client.get(url_for('get_occupation'))
 
             self.assert200(response)
-            self.assertIn(response.data.decode(), occupation)
+            self.assertIn(response.data.decode().replace('"','').strip(), occupation)
         

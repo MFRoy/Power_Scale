@@ -1,13 +1,13 @@
 <html>
     <body style="background-color:rgb(0, 0, 0);">
-        <h1 style="color:#FFFF00;">⚡Power Scale⚡</h1>
-        <h2 style="color:#FFFF00;">A {{ species }} {{ occupation }} has a power level of {{ power_level }}</h2>
+        <h1 style="color:#FFFF00;text-align:center">⚡Star Wars Power Scale⚡</h1>
+        <h2 style="color:#FFFF00;text-align:center">A {{ species }} {{ occupation }} has a power level of {{ power_level }}</h2>
     </body>
 
-    <h2 style="color:#FFFF00;">History</h2>
+    <h2 style="color:#FFFF00;text-align:center">History</h2>
     {%for h in history%}
         <div class="history">
-            <h3 style="color:#FFFF00;">A {{ h.species }} {{ h.occupation }} has a power level of {{ h.power_level }}  <br></h3>
+            <h3 style="color:#FFFF00;text-align:center">A {{ h.species }} {{ h.occupation }} has a power level of {{ h.power_level }}  <br></h3>
         </div>
     {%endfor%}
 

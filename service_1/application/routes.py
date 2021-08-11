@@ -9,10 +9,9 @@ def home():
     species = requests.get('http://service-2:5000/get/occupation').json()
     occupation = requests.get('http://service-3:5000/get/species').json()
     data = [species, occupation]
-    # data = [requests.get('http://service-2:5000/get/occupation').json(), requests.get('http://service-3:5000/get/species').json()]
     power_level = requests.post('http://service-4:5000/post/power', json=data).json()
 
-    history = Powerscale.query.order_by(Powerscale.id.desc()).limit(3).all()
+    history = Powerscale.query.order_by(Powerscale.id.desc()).limit(10).all()
     result = Powerscale(power_level=power_level, species=species, occupation=occupation)
     db.session.add(result)
     db.session.commit()
