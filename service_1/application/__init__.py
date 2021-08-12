@@ -1,11 +1,12 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
+from os import getenv
 
 app = Flask(__name__)
 
 app.config.update(
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@34.89.1.172/power_scale",
+    SQLALCHEMY_DATABASE_URI =getenv("DATABASE_URI"),
     SQLALCHEMY_TRACK_MODIFICATIONS=True,
     SECRET_KEY=str(os.urandom(16))
 )
