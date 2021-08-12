@@ -12,7 +12,7 @@ pipeline{
         }
         stage('Test app'){
             steps{
-                sh "bash scripts/tests.sh"
+                sh "bash scripts/test.sh"
             }
         }
         stage('Builds images'){
