@@ -9,3 +9,13 @@
   become: true
   roles:
      - Install Docker
+
+- hosts: swarm-master
+  become: true
+  roles:
+     - Initialise Swarm
+
+- hosts: workers
+  become: true
+  roles:
+    - Join Swarm
