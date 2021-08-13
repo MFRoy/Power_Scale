@@ -67,4 +67,25 @@ As ypu can see this allows me to see any gaps within the testing leaving only a 
 Continuous deployment is used throughout the project in order to allow for quick and smooth development. The approach taken allows deploying new versions of the application with limited down-time.
 
 ### Jenkins
-Whenever new content is pushed to the `dev` branch, Github will send a webhook to Jenkins which tells it to run the following pipeline:
+Whenever new content is pushed Github will send a webhook to Jenkins which tells it to run the following pipeline:
+
+#### **1.** Test: pytest  
+> Unit tests are run as outlined [earlier](#analysis-of-testing). A coverage report is produced and can be viewed in the console logs. 
+
+#### **2.** & **3.** Build & Push: docker-compose  
+> Jenkins' credentials system is used to handle logging into DockerHub, and the new images are then pushed to the repository specified.
+
+#### **4.** Configure: ansible 
+> Ansible configures a few things:
+> * Installing dependencies,
+> * Setting up the swarm, and joining the swarm on all worker nodes,
+> * Reloading NGINX with any changes to the nginx.conf file.
+
+#### **5.** Deploy: docker swarm/stack 
+> Jenkins copies the `docker-compose.yaml` file over to the manager node, SSH's onto it, and then runs `docker stack deploy`.
+
+![CI](images/ci.png)
+### Entity Diagram
+While this project only makes use of one table in its database, it is still important to describe the structure of this table.
+
+![ED](images/entity_diagram.PNG)
