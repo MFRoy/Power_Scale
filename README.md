@@ -89,3 +89,49 @@ Whenever new content is pushed Github will send a webhook to Jenkins which tells
 While this project only makes use of one table in its database, it is still important to describe the structure of this table.
 
 ![ED](images/entity_diagram.PNG)
+
+### Interactions Diagram
+In the following diagram we are able to see the layout of the virtual machines as used in this project. This maps out where the information is taken from as a user connects to the NGINX machine on port 80.
+![diagram of the swarm](./images/lb.PNG)
+
+### The 4 Services
+The below diagram represents how the services interact with one another. 
+the front-end sends GET requests to API-1 and API-2. It then sends their responses to API-3 as a POST request, and API-3 sends its data back in response. Now, finally, the front-end can send requests to the MySQL instance to INSERT the new entry, and SELECT the old entries in order to display a history to the user 
+![diagram of the services](./images/serve.PNG)
+
+### Refactoring
+ Though the approach laid out above hits the MVP, It has refactored it in several areas to improve performance.
+
+#### Jenkins Plug-ins 
+Using a plug in for jenkins as preveuslt mentioned i am=ble to have all results displayed cleary in graphs and charts 
+
+## Development
+### Front-End
+When navigating to port 80 on the NGINX's IP, the steps will be taken as outlined in the previous 2 diagrams and the relevant information will be displayed in the format as shown below. This result is displayed using HTML
+![Front](./images/app.PNG)
+
+### Unit Testing
+As the application was fairly basic the testing became minimal the only part that needed more detail was utalising mock tests as they wouldnt be abe to acess data fro other containers.
+![test](./images/test.PNG)<br>
+as you can see and was previusly mentioned only one line is left untested resulting in 99% coverage the methods for testing was as follows:
+
+```sudo apt-get install python3-venv -y
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip3 install -r requirements.txt
+python3 -m pytest --cov --cov-config=.coveragerc --cov-report term-missing --cov-report xml:coverage.xml --junitxml junit.xml
+
+```
+## Footer
+### Future Improvements
+* Add a button to refresh the page
+* Possibly CRUD functionality
+* Improve testing to include integration testing
+
+### Author
+Michael Roy
+### Acknowledgements
+* Ryan Wright
+* Oliver Nichols
