@@ -45,3 +45,26 @@ In order to furfil all of the requirements i decided to focus on the infastructu
 ## Architecture
 ### Risk Assessment
 My detailed risk assessment can be seen below, outlining the risks that have potential to impact the project. A risk  assesment is an important tool to avoid issues wher epossible but also to be aware of solutions when risks arise.
+
+![risk assessment image](images/RI.PNG)
+
+Areas highlighted indidncate revisited risks
+
+### Kanban Board
+My project tracking board can be seen below. 
+
+![Trello](images/Trello.PNG)
+Trello was used over other similar providers as Trello is lightweight, free-to-use, and presents the board in a very visual way.
+
+### Analysis of Testing
+A test driven approach was taken to help find gaps in the application whilst it was being developed. As the app grew through to compleation tests were checked to ensure the app remained fully functioning 
+utalising a jenkins plugin i was able to clearly see gaps in the testing and fill them  
+![Plugin](images/test_analysis.PNG)
+
+As ypu can see this allows me to see any gaps within the testing leaving only a single line left untested resulting in 99% coverage
+
+## Infrastructure
+Continuous deployment is used throughout the project in order to allow for quick and smooth development. The approach taken allows deploying new versions of the application with limited down-time.
+
+### Jenkins
+Whenever new content is pushed to the `dev` branch, Github will send a webhook to Jenkins which tells it to run the following pipeline:
