@@ -7,7 +7,13 @@ power = {
         'Wookie':5,
         'Zabrak':50,
         'Lasat':30,
-        'Ewok':45
+        'Ewok':45,
+        'Rodian':25,
+        'Gamorrean':20,
+        'Sith':50,
+        'Vor':20,
+        'Ortolan':40,
+        'Toydarian':20
     },
     'occupation': {
         'Assasin':30,
