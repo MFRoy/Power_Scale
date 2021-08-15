@@ -103,7 +103,7 @@ the front-end sends GET requests to API-1 and API-2. It then sends their respons
  Though the approach laid out above hits the MVP, It has refactored it in several areas to improve performance.
 
 #### Jenkins Plug-ins 
-Using a plug in for jenkins as preveuslt mentioned i am=ble to have all results displayed cleary in graphs and charts 
+Using a plug in for jenkins as previously lt mentioned i am able to have all results displayed cleary in graphs and charts 
 
 ## Development
 ### Front-End
