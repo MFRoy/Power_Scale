@@ -15,7 +15,7 @@
   roles:
      - Initialise Swarm
 
-- hosts: workers
+- hosts: swarm-worker
   become: true
   roles:
     - Join Swarm
