@@ -4,40 +4,26 @@ app = Flask(__name__)
 
 power = {
     'species': {
-        'Storm Trooper':30, 
-        'Assasin':35, 
-        'Pilot':20,
-        'Farmer':15
+        'Jawa':5,
+        'Bith':50,
+        'Human':30,
+        'Hutt':45,
+        'Gungan':25,
+        'Droid':20,
+        'Muun':50,
+        'Dug':20,
+        'kaminoan':40,
+        'Ugnaught':20
     },
     'occupation': {
-        'Ewok':20, 
-        'Wookie':40, 
-        'Zabrak':35,
-        'Lasat':30,
-        'Geonosian':20
+        'Bounty Hunter':30,
+        'Sith Lord':50,
+        'Jedi':50,
+        'Crime Lord': 40,
+        'Politician': 15,
+        'Medic':25
     }
 }
-#     'species': {
-#         'Jawa':5,
-#         'Bith':50,
-#         'Human':30,
-#         'Hutt':45,
-#         'Gungan':25,
-#         'Droid':20,
-#         'Muun':50,
-#         'Dug':20,
-#         'kaminoan':40,
-#         'Ugnaught':20
-#     },
-#     'occupation': {
-#         'Bounty Hunter':30,
-#         'Sith Lord':50,
-#         'Jedi':50,
-#         'Crime Lord': 40,
-#         'Politician': 15,
-#         'Medic':25
-#     }
-# }
 
 @app.route('/post/power', methods=['POST'])
 def post_power():
