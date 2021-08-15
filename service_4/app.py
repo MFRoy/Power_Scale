@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 power = {
     'species': {
-        'Jawa':5,
+        'Wookie':5,
         'Bith':50,
         'Human':30,
         'Hutt':45,
