@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 power = {
     'species': {
-        'Wookie':5,
+        'Jawa':5,
         'Bith':50,
         'Human':30,
         'Hutt':45,
@@ -16,12 +16,12 @@ power = {
         'Ugnaught':20
     },
     'occupation': {
-        'Bounty Hunter':30,
-        'Sith Lord':50,
-        'Jedi':50,
-        'Crime Lord': 40,
-        'Politician': 15,
-        'Medic':25
+        'Assasin':30,
+        'Storm Trooper':50,
+        'Pilot':50,
+        'Farmer': 40,
+        'Civilian': 15,
+        'Force User':25
     }
 }
 

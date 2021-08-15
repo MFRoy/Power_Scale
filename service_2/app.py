@@ -4,7 +4,7 @@ import random
 
 app = Flask(__name__)
 
-occupation = ['Bounty Hunter', 'Sith Lord', 'Jedi', 'Crime Lord', 'Politician', 'Medic']
+occupation = ['Assasin', 'Storm Trooper', 'Pilot', 'Farmer', 'Civilian', 'Force User']
 
 @app.route('/get/occupation')
 def get_occupation():
