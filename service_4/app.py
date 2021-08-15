@@ -16,7 +16,7 @@ power = {
         'Lasat':30,
         'Geonosian':20
     }
-# }
+}
 #     'species': {
 #         'Jawa':5,
 #         'Bith':50,
