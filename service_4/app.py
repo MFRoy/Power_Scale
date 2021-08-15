@@ -17,11 +17,11 @@ power = {
     },
     'occupation': {
         'Assasin':30,
-        'Storm Trooper':50,
+        'Commander':50,
         'Pilot':50,
         'Farmer': 40,
         'Civilian': 15,
-        'Force User':25
+        'Banker':25
     }
 }
 
