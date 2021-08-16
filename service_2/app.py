@@ -1,9 +1,10 @@
+
 from flask import Flask, jsonify
 import random
 
 app = Flask(__name__)
 
-occupation = ['Bounty Hunter', 'Sith Lord', 'Jedi', 'Crime Lord', 'Politician', 'Medic']
+occupation = ['Assasin', 'Commander', 'Pilot', 'Farmer', 'Civilian', 'Banker']
 
 @app.route('/get/occupation')
 def get_occupation():
