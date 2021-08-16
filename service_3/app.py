@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-species = ['Jawa', 'Bith', 'Human', 'Hutt', 'Gungan', 'Droid', 'Muun', 'Dug', 'kaminoan', 'Ugnaught']
+species = ['Wookie', 'Zabrak', 'Lasat', 'Ewok']
 
 @app.route('/get/species')
 def get_species():
