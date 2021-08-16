@@ -134,5 +134,4 @@ python3 -m pytest --cov --cov-config=.coveragerc --cov-report term-missing --cov
 Michael Roy
 ### Acknowledgements
 * Ryan Wright
-
 * Oliver Nichols
